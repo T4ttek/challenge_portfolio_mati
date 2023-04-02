@@ -27,13 +27,13 @@ class TestLoginPage(unittest.TestCase):
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.maximize_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
+        # super(TestLoginPage, self).setUp(self)
 
     def test_log_in_to_the_system(self):
         user_login = LoginPage(self.driver)
         dashboard = Dashboard(self.driver)
         players = Players(self.driver)
         user_login.check_login_page_title()
-        # user_login.check_login_form_title()
         user_login.type_in_email("user07@getnada.com")
         user_login.set_password_field("Test-1234")
         user_login.click_on_sign_in_button()

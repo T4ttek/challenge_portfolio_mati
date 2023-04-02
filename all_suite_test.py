@@ -7,10 +7,10 @@ from test_cases.test_player import TestPlayerPage
 
 
 def full_suite():
-    test_suite = unittest.TestSuite()
-    test_suite.addTest(makeSuite(TestLoginPage))
-    test_suite.addTest(makeSuite(TestPlayerPage))
-    return test_suite
+    test_suite = unittest.TestLoader()
+    login_test = test_suite.loadTestsFromTestCase(TestLoginPage)
+    player_test = test_suite.loadTestsFromTestCase(TestPlayerPage)
+    return unittest.TestSuite([login_test, player_test])
 
 
 if __name__ == '__main__':

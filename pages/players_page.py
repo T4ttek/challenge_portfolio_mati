@@ -7,6 +7,7 @@ class Players(BasePage):
     name_field = '//input[@name="name"]'
 
     # -------------------------- Add player ----------------------------------------
+    email_field = "//*[@name='email']"
     surname_field = "//input[@name='surname']"
     age_field = "//input[@name='age']"
     main_position_field = "//input[@name='mainPosition']"
@@ -23,6 +24,9 @@ class Players(BasePage):
         self.click_on_the_element(self.players_list)
 
     # -------------------- Add player ----------------------------------------------
+
+    def set_email_field(self, email):
+        return self.field_send_keys(self.email_field, email)
 
     def set_name_field(self, name):
         return self.field_send_keys(self.name_field, name)
