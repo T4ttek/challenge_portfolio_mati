@@ -14,7 +14,6 @@ class Players(BasePage):
     submit_button = "//button[@type='submit']"
     expected_title = "Edit player"
     edit_player_title = "//title"
-
     reports_link = "//ul/div[3]/div/span"
 
     # ------------------------- Player list ----------------------------------------

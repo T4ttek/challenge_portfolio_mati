@@ -37,7 +37,7 @@ class TestPlayerPage(unittest.TestCase):
     def test_3edit_player(self):
         side_menu = SideMenu(self.driver)
         players = Players(self.driver)
-        # self.test_log_in_to_the_system()
+        TestLoginPage.test_log_in_to_the_system(self)
         side_menu.click_on_players_button()
         players.click_on_player()
 
