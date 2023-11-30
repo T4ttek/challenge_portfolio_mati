@@ -11,7 +11,7 @@ if SYSTEM == 'win32':
 else:
     CHROME_DRIVER = "chromedriver"
 
-DRIVER_PATH = os.path.join(PATH_TO_PROJECT, '../drivers', CHROME_DRIVER)
+DRIVER_PATH = "aaa"
 IMPLICITLY_WAIT = 3
 EXPLICITLY_WAIT = 30
 
